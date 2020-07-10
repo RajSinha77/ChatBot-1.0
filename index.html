@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
   <title>Title of the document</title>
@@ -8,4 +9,32 @@
   <p>This is a paragraph.</p>
 </body>
 
+=======
+<html>
+<head>
+  <title>WebChat Testing</title>
+</head>
+
+<body>
+  <h1>Hi, I am deploying my AI ChatBot for the first time</h1>
+  <p>Please appreciate</p>
+  
+  <div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<!-- you can add a version tag if you need, e.g for version 0.11.5 https://cdn.jsdelivr.net/npm/rasa-webchat@0.11.5/lib/index.min.js  -->
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Chitti The Robot",
+    subtitle: "questions coming soon",
+    params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+  })
+</script>
+</body>
+
+>>>>>>> 70883ad3df182a0eee2883c21fbce32c14711cbc
 </html>
